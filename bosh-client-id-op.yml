@@ -1,0 +1,11 @@
+---
+- type: replace
+  path: /instance_groups/name=prometheus/jobs/name=bosh_exporter/properties/bosh?/uaa?/client-id
+  value: ((bosh-client-id))
+- type: replace
+  path: /instance_groups/name=prometheus/jobs/name=bosh_exporter/properties/bosh?/uaa?/client-secret
+  value: ((bosh-client-secret))
+- type: remove
+  path: /instance_groups/name=prometheus/jobs/name=bosh_exporter/properties/bosh/username?
+- type: remove
+  path: /instance_groups/name=prometheus/jobs/name=bosh_exporter/properties/bos?/password?
