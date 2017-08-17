@@ -8,4 +8,4 @@
 - type: remove
   path: /instance_groups/name=prometheus/jobs/name=bosh_exporter/properties/bosh/username?
 - type: remove
-  path: /instance_groups/name=prometheus/jobs/name=bosh_exporter/properties/bos?/password?
+  path: /instance_groups/name=prometheus/jobs/name=bosh_exporter/properties/bosh/password?
