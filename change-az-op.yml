@@ -1,11 +1,13 @@
 ---
 - type: replace
-  path: /instance_groups/name=prometheus/jobs/name=bosh_exporter/properties/bosh?/uaa?/client-id
-  value: ((bosh-client-id))
+  path: /instance_groups/name=prometheus/azs
+  value: [((az-name))]
 - type: replace
-  path: /instance_groups/name=prometheus/jobs/name=bosh_exporter/properties/bosh?/uaa?/client-secret
-  value: ((bosh-client-secret))
-- type: remove
-  path: /instance_groups/name=prometheus/jobs/name=bosh_exporter/properties/bosh/username?
-- type: remove
-  path: /instance_groups/name=prometheus/jobs/name=bosh_exporter/properties/bos?/password?
+  path: /instance_groups/name=alertmanager/azs
+  value: [((az-name))]
+- type: replace
+  path: /instance_groups/name=grafana/azs
+  value: [((az-name))]
+- type: replace
+  path: /instance_groups/name=nginx/azs
+  value: [((az-name))]
