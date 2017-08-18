@@ -1,0 +1,10 @@
+---
+- type: replace
+  path: /instance_groups/name=grafana/jobs/name=grafana/properties/grafana/server?/root_url?
+  value: ((grafana_url))
+- type: replace
+  path: /instance_groups/name=alertmanager/jobs/name=alertmanager/properties/alertmanager/web?/external_url?
+  value: (alert_url))
+- type: replace
+  path: /instance_groups/name=prometheus/jobs/name=prometheus/properties/prometheus/external_url?
+  value: ((prometheus_url))
